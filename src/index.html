@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body class="flex justify-center items-center scroll-smooth bg-[#D9E6FB]">
+    <main class="w-6xl max-sm:w-3xs">
+      <div class="rounded-md mt-5 bg-[#F9FCFF] mb-15">
+        <div class="p-2 flex justify-between">
+          <img src="/assets/images/logo.svg" alt="" />
+
+          <img
+            class="bg-amber-200 p-2.5 rounded-xl cursor-pointer"
+            src="/assets/images/icon-moon.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-between items-center mb-15 max-sm:grid max-sm:grid-cols-1"
+      >
+        <p class="text-3xl text-center font-bold text-[#0E1733]">
+          Extensions List
+        </p>
+        <div class="flex gap-4">
+          <button
+            class="bg-amber-50 px-4.5 py-2.5 rounded-3xl font-medium cursor-pointer"
+          >
+            All
+          </button>
+          <button
+            class="bg-amber-50 px-4.5 py-2.5 rounded-3xl font-medium cursor-pointer"
+          >
+            Active
+          </button>
+          <button
+            class="bg-amber-50 px-4.5 py-2.5 rounded-3xl font-medium cursor-pointer"
+          >
+            Inactive
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-5 mb-9 max-sm:grid-cols-1">
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-devlens.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">DevLens</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Quickly inspect page layouts and visualize element boundaries.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-1"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-1"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-style-spy.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">StyleSpy</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Instantly analyze and copy CSS from any webpage element.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-2"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-2"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-speed-boost.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">SpeedBoost</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Optimizes browser resource usage to accelerate page loading.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-3"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-3"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-json-wizard.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">JSONWizard</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Formats, validates, and prettifies JSON responses in-browser.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-4"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-4"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-tab-master-pro.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">TabMaster Pro</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Organizes browser tabs into groups and sessions.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-5"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-5"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-viewport-buddy.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">ViewportBuddy</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Simulates various screen resolutions directly within the
+                browser.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-6"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-6"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex items-start gap-3 mb-12">
+            <img src="/assets/images/logo-markup-notes.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">Markup Notes</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Enables annotation and notes directly onto webpages
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-7"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-7"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 items-start mb-12">
+            <img src="/assets/images/logo-grid-guides.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">GridGuides</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Overlay customizable grids and alignment guides on any webpage.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-8"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-8"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 mb-12">
+            <img src="/assets/images/logo-palette-picker.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">
+                Palette Picker
+              </h3>
+              <p class="text-[16px] text-[#52576a]">
+                Instantly extracts color palettes from any webpage.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-9"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-9"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 mb-12">
+            <img src="/assets/images/logo-link-checker.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">LinkChecker</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Scans and highlights broken links on any page.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-10"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-10"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 mb-12">
+            <img src="/assets/images/logo-dom-snapshot.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">DOM Snapshot</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Capture and export DOM structures quickly.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-11"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-11"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F9FCFF] p-5 rounded-md">
+          <div class="flex gap-3 mb-12">
+            <img src="/assets/images/logo-console-plus.svg" alt="" />
+            <div>
+              <h3 class="text-2xl font-medium text-[#0E1733]">ConsolePlus</h3>
+              <p class="text-[16px] text-[#52576a]">
+                Enhanced developer console with advanced filtering and logging.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="font-medium px-3.5 py-1.5 rounded-3xl border-[1px] border-solid cursor-pointer"
+            >
+              Remove
+            </button>
+            <div class="relative inline-block w-11 h-5">
+              <input
+                id="switch-12"
+                type="checkbox"
+                class="peer appearance-none w-11 h-5 bg-[#c7c7c7] rounded-full checked:bg-[#b52921] cursor-pointer transition-colors duration-300"
+              />
+              <label
+                for="switch-12"
+                class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 checked:border-slate-800 cursor-pointer"
+              >
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
